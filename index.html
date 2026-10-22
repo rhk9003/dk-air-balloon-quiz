@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#e5f5f6">
+  <meta name="description" content="跟呼吸小氣球一起挑戰 5 題空氣鞋冷知識，認識 DK 高博士的得獎紀錄與底台巧思。">
+  <title>跟呼吸小氣球，挑戰空氣鞋冷知識｜DK 高博士</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="reactions.css">
+  <script src="questions.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="quiz-shell" id="quiz-shell">
+    <div class="sky-cloud cloud-left" aria-hidden="true"></div>
+    <div class="sky-cloud cloud-right" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="brand" href="https://www.dk-shoes.com.tw/page/AirShoes" target="_blank" rel="noopener noreferrer" aria-label="DK 高博士空氣鞋介紹，另開視窗"><strong>DK</strong><span>高博士</span></a>
+      <button class="text-button awards-trigger" type="button" data-open-awards><span aria-hidden="true">★</span> 看看獎項</button>
+    </header>
+
+    <main id="main-content">
+      <section class="screen home-screen" id="home-screen" aria-labelledby="home-title">
+        <div class="hero-copy">
+          <p class="eyebrow">氣球人出題，你來猜！</p>
+          <h1 id="home-title" tabindex="-1"><span class="title-top">空氣鞋</span><span class="title-bottom">知識小樂園</span></h1>
+          <p class="hero-description">5 題認識 DK 的得獎紀錄與專利巧思</p>
+        </div>
+        <div class="hero-art" aria-label="D、K、E、C 呼吸小氣球小隊">
+          <div class="hero-speech">小氣球集合！</div>
+          <div class="stage-ground" aria-hidden="true"></div>
+          <span class="play-dot dot-one" aria-hidden="true"></span>
+          <span class="play-dot dot-two" aria-hidden="true"></span>
+          <span class="play-dot dot-three" aria-hidden="true"></span>
+          <span class="art-star" aria-hidden="true">★</span>
+          <div class="crew">
+            <div class="crew-member crew-d"><div class="mascot mascot-d"><img src="assets/mascot-d.png" alt="藍色 D 氣球人" width="1672" height="941" draggable="false"></div></div>
+            <div class="crew-member crew-k"><div class="mascot mascot-k"><img src="assets/mascot-k.png" alt="綠色 K 氣球人" width="1692" height="929" draggable="false"></div></div>
+            <div class="crew-member crew-e"><div class="mascot mascot-e"><img src="assets/mascot-e.png" alt="黃色 E 氣球人" width="1693" height="929" draggable="false"></div></div>
+            <div class="crew-member crew-c"><div class="mascot mascot-c"><img src="assets/mascot-c.png" alt="珊瑚色 C 氣球人" width="1649" height="954" draggable="false"></div></div>
+          </div>
+          <p class="crew-caption">呼吸小氣球小隊</p>
+        </div>
+        <div class="hero-actions">
+          <button class="button button-primary start-button" id="start-button" type="button">一起來挑戰 <span aria-hidden="true">➜</span></button>
+          <div class="game-facts" aria-label="共 5 題，約 1 分鐘，不需登入"><span>5 道趣味問答</span><span>約 1 分鐘</span><span>不需登入</span></div>
+        </div>
+        <div class="home-bottom"><p>猜錯也沒關係，小氣球陪你一起學！</p></div>
+      </section>
+
+      <section class="screen question-screen" id="question-screen" aria-labelledby="question-title" hidden>
+        <div class="quiz-status"><span id="question-counter">第 1 / 5 題</span><span id="score-counter">已答對 0 題</span></div>
+        <div class="progress-track" role="progressbar" id="progress-bar" aria-label="答題進度" aria-valuemin="0" aria-valuemax="5" aria-valuenow="0"><div id="progress-fill"></div></div>
+        <div class="question-layout">
+          <aside class="host-stage" aria-label="本題主持人">
+            <div class="host-speech" id="host-speech"></div>
+            <div class="host-figure"><div class="mascot" id="host-mascot"><img id="host-image" src="assets/mascot-k.png" alt="K 氣球人" draggable="false"></div></div>
+            <p class="host-name" id="host-name">K 小氣球</p>
+          </aside>
+          <div class="question-content">
+            <p class="eyebrow question-category" id="question-category"></p>
+            <h2 class="question-title" id="question-title" tabindex="-1"></h2>
+            <p class="choose-hint" id="choose-hint">選一個答案，看看你猜對了沒。</p>
+            <div class="answer-list" id="answer-list" role="group" aria-labelledby="question-title"></div>
+            <div id="answer-feedback" class="answer-feedback" aria-live="polite" aria-atomic="true"></div>
+            <div class="next-row"><button class="button button-primary" id="next-button" type="button" hidden>下一題 <span aria-hidden="true">→</span></button></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="screen result-screen" id="result-screen" aria-labelledby="result-title" hidden>
+        <p class="eyebrow result-eyebrow">挑戰完成 · 每一步都更懂 DK</p>
+        <h2 id="result-title" tabindex="-1"></h2>
+        <p class="result-intro" id="result-intro"></p>
+        <div class="result-center">
+          <div class="result-character"><div class="mascot mascot-d"><img src="assets/mascot-d.png" alt="D 小氣球陪你完成挑戰" width="1672" height="941" draggable="false"></div></div>
+          <div class="score-medallion"><span class="score-label">本次成績</span><p><strong id="final-score">100</strong><span>分</span></p><span id="result-count">答對 5 / 5 題</span></div>
+          <div class="result-character"><div class="mascot mascot-k"><img src="assets/mascot-k.png" alt="K 小氣球為你鼓勵" width="1692" height="929" draggable="false"></div></div>
+        </div>
+        <div class="result-actions"><a class="button button-primary" href="https://www.dk-shoes.com.tw/page/AirShoes" target="_blank" rel="noopener noreferrer">認識 DK 空氣鞋 <span aria-hidden="true">↗</span><span class="sr-only">，另開視窗</span></a><button class="button button-outline" id="restart-button" type="button">重新挑戰 <span aria-hidden="true">↻</span></button></div>
+        <button class="text-button review-toggle" id="review-toggle" type="button" aria-expanded="false" aria-controls="review-panel">看看 5 題重點 <span aria-hidden="true">＋</span></button>
+        <section class="review-panel" id="review-panel" hidden aria-labelledby="review-title"><h3 id="review-title">把這 5 個小知識帶走</h3><ol class="review-list" id="review-list"></ol></section>
+      </section>
+    </main>
+    <footer class="site-footer"><span>DK 高博士</span><span>跟著小氣球，認識腳下的巧思。</span></footer>
+  </div>
+
+  <dialog id="awards-dialog" class="awards-dialog" aria-labelledby="awards-title">
+    <div class="dialog-header"><div><p class="eyebrow">DK 高博士</p><h2 id="awards-title">得獎與專利紀錄</h2></div><button class="dialog-close" id="close-awards" type="button" aria-label="關閉得獎與專利紀錄">×</button></div>
+    <div class="dialog-body"><img src="assets/awards.png" alt="DK 空氣鞋得獎與專利紀錄圖卡，包含 KIDE 大會鉑金獎與金牌，以及 IIIC 鞋底透氣結構改良金牌。" width="1280" height="2263" loading="lazy" decoding="async"><p class="image-caption">DK 高博士品牌資料圖卡</p></div>
+  </dialog>
+  <noscript><p class="noscript">請啟用 JavaScript，即可開始氣球人問答遊戲。</p></noscript>
+</body>
+</html>
