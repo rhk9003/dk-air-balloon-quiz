@@ -7,6 +7,7 @@
 ## 網站
 
 - [開始遊戲](https://rhk9003.github.io/dk-air-balloon-quiz/)
+- [同事試玩回饋](https://rhk9003.github.io/dk-air-balloon-quiz/feedback.html)：提供整體評價與逐題建議。
 - [認識 DK 高博士空氣鞋](https://www.dk-shoes.com.tw/page/AirShoes)
 
 ## 執行方式

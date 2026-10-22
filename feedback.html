@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#caeaf3">
+  <meta name="robots" content="noindex, nofollow">
+  <title>同事試玩回饋｜DK 空氣鞋知識小樂園</title>
+  <link rel="stylesheet" href="feedback.css">
+  <script src="questions.js" defer></script>
+  <script src="feedback-config.js" defer></script>
+  <script src="feedback.js" defer></script>
+</head>
+<body>
+  <div class="feedback-shell" id="feedback-shell">
+    <header class="page-header">
+      <a class="back-link" href="index.html"><span aria-hidden="true">←</span> 返回遊戲</a>
+      <span class="brand-name">DK 高博士</span>
+    </header>
+
+    <main>
+      <div class="page-intro">
+        <p class="intro-label">空氣鞋知識小樂園</p>
+        <h1>同事試玩回饋</h1>
+        <p class="intro-copy">整體感覺如何？哪一題可以更好玩？<br>把你的想法留給我們，一起把遊戲變得更好。</p>
+      </div>
+
+      <form id="feedback-form" class="feedback-form" method="post" action="feedback.html">
+        <section class="form-section identity-section" aria-labelledby="identity-title">
+          <div class="section-heading"><span class="section-number" aria-hidden="true">1</span><h2 id="identity-title">先認識一下你</h2></div>
+          <p class="section-note">部門與姓名只供內部整理；同部門姓名再次送出會更新回饋。</p>
+          <div class="identity-fields">
+            <div class="field"><label for="dept">部門 <span class="required-tag">必填</span></label><input id="dept" name="dept" type="text" maxlength="40" autocomplete="organization" placeholder="例如：門市部" required></div>
+            <div class="field"><label for="name">姓名 <span class="required-tag">必填</span></label><input id="name" name="name" type="text" maxlength="40" autocomplete="name" placeholder="請填寫姓名" required></div>
+          </div>
+        </section>
+
+        <section class="form-section overall-section" aria-labelledby="overall-title">
+          <div class="section-heading"><span class="section-number" aria-hidden="true">2</span><h2 id="overall-title">整體玩起來如何？</h2></div>
+          <fieldset class="rating-fieldset"><legend>整體評價 <span class="required-tag">必填</span></legend>
+            <div class="rating-options overall-options">
+              <label class="rating-choice"><input type="radio" name="overall" value="喜歡" required><span><span class="choice-icon" aria-hidden="true">♥</span><span>喜歡</span></span></label>
+              <label class="rating-choice"><input type="radio" name="overall" value="還可以" required><span><span class="choice-icon" aria-hidden="true">○</span><span>還可以</span></span></label>
+              <label class="rating-choice"><input type="radio" name="overall" value="需要調整" required><span><span class="choice-icon" aria-hidden="true">↗</span><span>需要調整</span></span></label>
+            </div>
+          </fieldset>
+          <div class="field overall-note-field"><label for="overall-note">整體建議 <span class="optional-tag">選填</span></label><textarea id="overall-note" name="overallNote" rows="4" maxlength="1000" placeholder="例如：手機排版、角色反應、遊戲流程，或你特別喜歡的地方。" aria-describedby="overall-note-count"></textarea><span class="character-count" id="overall-note-count">0 / 1000 字</span></div>
+        </section>
+
+        <section class="form-section questions-section" aria-labelledby="questions-title">
+          <div class="section-heading"><span class="section-number" aria-hidden="true">3</span><h2 id="questions-title">每一題，也想聽聽你的想法</h2></div>
+          <p class="section-note">逐題回饋皆為選填。可以只挑有想法的題目，也可以選「沒意見」。</p>
+          <div id="question-feedback-list" class="question-feedback-list"></div>
+        </section>
+
+        <div class="submit-section">
+          <p class="privacy-note">這裡不公開顯示同事的姓名或留言。</p>
+          <p id="availability-note" class="availability-note" hidden></p>
+          <button class="submit-button" id="submit-feedback" type="submit" disabled>送出回饋 <span aria-hidden="true">→</span></button>
+          <p class="draft-note" id="draft-note">填寫內容會暫存於這台裝置。</p>
+          <p class="submission-status" id="submission-status" role="status" aria-live="polite" tabindex="-1"></p>
+        </div>
+      </form>
+      <noscript><p class="no-script">請啟用 JavaScript，才能顯示題目、保留草稿並送出回饋。</p></noscript>
+    </main>
+    <footer class="page-footer"><a href="index.html">回到知識小樂園</a><span>謝謝你幫小氣球變得更好！</span></footer>
+  </div>
+</body>
+</html>
