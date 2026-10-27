@@ -135,4 +135,5 @@ h1,.result-screen h2{-webkit-text-stroke:0;text-shadow:none;paint-order:normal;f
 .colleague-feedback-link{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;margin-top:10px;padding:7px 15px;border:1px solid #c2a776;border-radius:22px;background:#fff3d3;color:#795b3d;font-size:16px;font-weight:800;text-decoration:none;line-height:1.6}
 .colleague-feedback-link:hover{background:#fff8e5;border-color:#977d53}
 .result-feedback-entry{margin-top:0}.result-feedback-entry .colleague-feedback-link{margin-top:3px}
+.official-activity-note{margin:17px auto 0;max-width:620px;color:#795b4f;font-size:16px;line-height:1.75;text-align:center}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
